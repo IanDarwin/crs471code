@@ -1,0 +1,4 @@
+= crs471add
+
+This repo contains extra code for Course 471 Attendees. It may not make any sense outside
+the context of that course.
