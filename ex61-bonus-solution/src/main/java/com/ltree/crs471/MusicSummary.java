@@ -14,11 +14,12 @@ import java.util.Map;
  */
 public class MusicSummary {
 	public static void main(String[] args) {
+		final String INFILE = "music.db";
+		final String OUTFILE = "musicsummary.txt";
+
 		//
 		// Complete the steps below:
 		//
-		final String INFILE = "music.db";
-		final String OUTFILE = "musicsummary.txt";
 
 		int recordingCount = 0;
 
