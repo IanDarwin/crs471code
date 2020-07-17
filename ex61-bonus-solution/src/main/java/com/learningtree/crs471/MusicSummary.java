@@ -1,4 +1,4 @@
-package com.ltree.crs471;
+package com.learningtree.crs471;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
