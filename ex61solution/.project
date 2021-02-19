@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-  <name>ex61-bonus-solution</name>
-  <comment>A somewhat modern replacement for ex61-bonus-solution</comment>
+  <name>ex61solution</name>
+  <comment>A modern replacement for the ex61solution exercise</comment>
   <projects/>
   <buildSpec>
     <buildCommand>

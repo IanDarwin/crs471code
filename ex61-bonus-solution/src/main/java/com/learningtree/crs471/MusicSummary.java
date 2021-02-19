@@ -48,7 +48,7 @@ public class MusicSummary {
 		}
 		
 		// Step 4 - print total number of recordings to console
-		var message = String.format("Total %d recordings", recordingCount);
+		String message = String.format("Total %d recordings", recordingCount);
 		System.out.println(message);
 		// And to our output file
 		try (PrintWriter pw = new PrintWriter(OUTFILE);) {
