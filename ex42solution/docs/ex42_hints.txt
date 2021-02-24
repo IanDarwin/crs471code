@@ -1,0 +1,65 @@
+
+//  4a.  Modify the line below to define MusicRecording as a subclass of Recording
+//
+
+Use the "extends" keyword
+
+
+
+//
+//	4c.  Define an array field of "Track" objects..this is the track list
+//		-  The field should have "private" access
+//
+
+Remember that arrays are defined using the square brackets
+
+
+
+//
+//	4d.  Initialize the fields of "MusicRecording" with the given
+//		parameter values
+
+If you make use of the "super" keyword, you can initialize the fields
+with three lines of code.
+
+
+
+//
+//  4e.  Define a method to return the artist's name.
+//		This method should have the following signature:
+//		-	public String getArtist()
+//
+
+public String getArtist() {
+
+   ...do your work here...
+
+}
+
+
+
+//
+//  4f.  Define a method to return the track list.
+//		This method should have the following signature:
+//		-	public Track[] getTrackList()
+//
+
+public Track[] getTrackList() {
+
+  ...do your work here...
+
+}
+
+
+
+//
+//	4g.  Override the toString() method to return the artist name
+//		and recording title.  The string should be formatted as
+//
+//
+
+public String toString() {
+   return artist + ", " + getTitle();
+}
+
+
