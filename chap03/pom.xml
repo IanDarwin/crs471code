@@ -2,13 +2,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.darwinsys</groupId>
-	<artifactId>ex61bonussolution</artifactId>
+	<artifactId>chap03</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<inceptionYear>2007</inceptionYear>
 
 	<description>
-		Coding Exercise Solution for Ex6.1, recording text file summary, done in current Java API
+		Code Examples from lt471add
 	</description>
 	<url>http://darwinsys.com/</url>
 	<licenses>
@@ -28,27 +27,12 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<javase.version>1.8</javase.version>
+		<javase.version>17</javase.version>
 		<maven.compiler.source>${javase.version}</maven.compiler.source>
 		<maven.compiler.target>${javase.version}</maven.compiler.target>
 		<maven.compiler.testSource>${javase.version}</maven.compiler.testSource>
 		<maven.compiler.testTarget>${javase.version}</maven.compiler.testTarget>
 		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<!-- None yet -->
-		</plugins>
-	</build>
 
 </project>

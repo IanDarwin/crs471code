@@ -26,8 +26,9 @@
 	</properties>
 
 	<modules>
+		<module>chap03</module>
 		<module>ex61solution</module>
-		<module>ex61-bonus-solution</module>
+		<module>ex61bonussolution</module>
 		<module>junitdemo</module>
 	</modules>
 
