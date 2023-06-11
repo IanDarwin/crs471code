@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
   <name>ex61solution</name>
-  <comment>A modern replacement for the ex61solution exercise</comment>
+  <comment>Coding Exercise Solution for Ex6.1, recording text file summary, done in current Java API. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
   <projects/>
   <buildSpec>
     <buildCommand>
