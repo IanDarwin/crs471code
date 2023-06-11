@@ -28,6 +28,7 @@
 
 	<modules>
 		<module>chap03</module>
+		<module>appe</module>
 		<module>ex61solution</module>
 		<module>ex61bonussolution</module>
 		<module>junitdemo</module>
