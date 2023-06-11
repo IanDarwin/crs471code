@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.darwinsys</groupId>
-	<artifactId>crs471add-parent</artifactId>
+	<artifactId>crs471code</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<inceptionYear>1995</inceptionYear>
+	<inceptionYear>2000</inceptionYear>
 
-	<name>crs471add</name>
+	<name>crs471code</name>
 	<url>http://javacook.darwinsys.com</url>
 	<description>Code Examples for Learning Tree Java Course 471</description>
 
@@ -70,12 +70,12 @@
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
-			<version>$log4jversion</version>
+			<version>${log4jversion}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>$log4jversion</version>
+			<version>${log4jversion}</version>
 		</dependency>
 
 	</dependencies>

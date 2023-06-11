@@ -1,13 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.darwinsys</groupId>
+	<parent>
+		<groupId>com.darwinsys</groupId>
+		<artifactId>crs471code</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
 	<artifactId>chap03</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
 
 	<description>
-		Code Examples from lt471add
+		Ian's extra code samples and solutions for Learning Tree 471.
 	</description>
 	<url>http://darwinsys.com/</url>
 	<licenses>

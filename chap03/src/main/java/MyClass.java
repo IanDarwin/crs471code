@@ -26,4 +26,10 @@ public class MyClass {
 				return false;
 		return true;
 	}
+
+	/** Demonstration "hashCode" method */
+	public int hashCode() {
+		return 17 * int1 |
+			obj1.hashCode();
+	}
 }
