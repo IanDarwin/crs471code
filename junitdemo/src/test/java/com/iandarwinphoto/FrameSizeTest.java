@@ -1,7 +1,7 @@
 package com.iandarwinphoto;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.jupiter.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FrameSizeTest {
 
