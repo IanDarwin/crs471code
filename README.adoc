@@ -1,4 +1,9 @@
 = crs471add
 
 This repo contains extra code for Course 471 Attendees. It may not make any sense outside
-the context of that course.
+the context of that course. There are half a dozen modules.
+
+The code that duplicates classes in the exercises/solutions is intended to provide
+more "modern" (Java 17-era) ways of writing the code.
+
+As a result, of course, you need Java 17 or later to run these projects.
