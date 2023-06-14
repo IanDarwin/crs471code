@@ -1,0 +1,18 @@
+public class Ex41Driver {
+    public static void main(String[] args) {
+        Track t;
+        switch(args.length) {
+            case 0:
+                t = new Track("Watching the Wheels", new Duration(0,3,48));
+                break;
+            case 3:
+                t = new Track(args[0], new Duration(0,
+                        Integer.parseInt(args[1]),
+                                Integer.parseInt(args[2])));
+                        break;
+            default:
+                throw new IllegalArgumentException("Usage: Ex41Driver [title mins secs]");
+        }
+        System.out.println("t = " + t);
+    }
+}
