@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Ex41Driver {
     public static void main(String[] args) {
         Track t;
@@ -14,5 +16,9 @@ public class Ex41Driver {
                 throw new IllegalArgumentException("Usage: Ex41Driver [title mins secs]");
         }
         System.out.println("t = " + t);
+
+        // Show the "of" factory pattern
+        Duration d2 = Duration.of(2700);
+        LocalDate date = LocalDate.of(2024,05,15);
     }
 }
