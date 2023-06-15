@@ -8,10 +8,10 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>appe</artifactId>
+	<artifactId>java8</artifactId>
 
 	<description>
-		Ian's extra code samples and solutions for Learning Tree 471, Appendix E.
+		Ian's extra code samples and solutions for Learning Tree 471.
 	</description>
 	<url>http://darwinsys.com/</url>
 	<licenses>

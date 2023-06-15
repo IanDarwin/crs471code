@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-  <name>appe</name>
-  <comment>Ian&apos;s extra code samples and solutions for Learning Tree 471, Appendix E.</comment>
+  <name>java8</name>
+  <comment>Ian&apos;s extra code samples and solutions for Learning Tree 471</comment>
   <projects/>
   <buildSpec>
     <buildCommand>
