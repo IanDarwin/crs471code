@@ -1,5 +1,7 @@
 package com.learningtree.crs471;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,14 +33,13 @@ public class MusicSummary {
 				count++;
 			}
 		});
+		System.out.println(count);
 
 		// An even better way, using Java 8 Streams and Lambda:
 		count = Files.readAllLines(Path.of("music.db"))
 				.stream()
 				.filter(line -> line.equals(SEP))
 				.count();
-
-		// Step 4. Print the number of recordings found
 		System.out.println(count);
 
 		// Another way, working line-at-a-time
@@ -47,6 +48,17 @@ public class MusicSummary {
 		for (String line : lines) {
 			if (line.equals(SEP)) {
 				++count;
+			}
+		}
+		System.out.println(count);
+
+		// Finally, the legacy (Java 5) way:
+		try (BufferedReader is = new BufferedReader(new FileReader("music.db"));) {
+			String line;
+			while ((line = is.readLine()) != null) {
+				if (line.equals(SEP)) {
+					++count;
+				}
 			}
 		}
 		System.out.println(count);
