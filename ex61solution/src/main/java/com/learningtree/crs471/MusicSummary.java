@@ -53,6 +53,7 @@ public class MusicSummary {
 		System.out.println(count);
 
 		// Finally, the legacy (Java 5) way:
+		count = 0;
 		try (BufferedReader is = new BufferedReader(new FileReader("music.db"));) {
 			String line;
 			while ((line = is.readLine()) != null) {
