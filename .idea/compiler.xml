@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="chap03" />
         <module name="ex61solution" />
-        <module name="appe" />
         <module name="ex61bonussolution" />
         <module name="junitdemo" />
         <module name="chap04" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="appe" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
