@@ -8,7 +8,7 @@ package com.learningtree.crs471;
  *
  *  @author 471 Development Team
  */
-public abstract class Recording implements Comparable {
+public abstract class Recording implements Comparable<Recording> {
 
 	//
 	//  DATA MEMBERS
@@ -139,9 +139,8 @@ public abstract class Recording implements Comparable {
 	/**
 	 *  Allows us to sort the recordings by title
 	 */
-	public int compareTo(Object object) {
+	public int compareTo(Recording recording) {
 
-		Recording recording = (Recording) object;
 		String targetTitle = recording.getTitle();
 
 		return title.compareTo(targetTitle);
