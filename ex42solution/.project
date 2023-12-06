@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ex42solution</name>
-	<comment></comment>
-	<projects>
-	</projects>
+	<name>ian471-ex42solution</name>
+	<comment>Ian&apos;s extra code samples and solutions for Learning Tree 471.</comment>
+	<projects/>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
