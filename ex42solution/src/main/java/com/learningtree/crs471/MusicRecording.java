@@ -2,7 +2,6 @@
 package com.learningtree.crs471;
 
 import java.io.PrintWriter;
-import java.util.Arrays;
 
 //
 //  TO DO:  Complete the steps below.
