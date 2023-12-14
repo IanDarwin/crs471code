@@ -19,20 +19,24 @@ public class Track {
 	//	4b.  Define the getter and setter methods for the
 	//		track title and runningTime
   	//		-  The methods should have "public" access
-  	//
+  	
+	
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public Duration getRunningtime() {
 		return runningtime;
 	}
+
 	public void setRunningtime(Duration runningtime) {
 		this.runningtime = runningtime;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Track [title=" + title + ", runningtime=" + runningtime + "]";

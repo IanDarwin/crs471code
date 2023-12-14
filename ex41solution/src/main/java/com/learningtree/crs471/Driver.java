@@ -25,11 +25,12 @@ public class Driver {
 		System.out.println(t);
 		
 		// Bonus: Get title, minutes, seconds from CLI
-		Track t2 = new Track();
+		
 		if (args.length != 3) {
 			System.err.println("Usage: Driver title minutes seconds");
 			return;
 		}
+		Track t2 = new Track();
 		t2.setTitle(args[0]);
 		int minutes = Integer.parseInt(args[1]);
 		int seconds = Integer.parseInt(args[2]);
