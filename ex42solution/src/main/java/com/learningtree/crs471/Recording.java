@@ -40,15 +40,6 @@ public abstract class Recording implements Comparable<Recording> {
 	//
 
 	/**
-	 *  Basic default constructor
-	 */
-	public Recording() {
-		// default constructor
-	}
-
-
-
-	/**
 	 *  Constructs a recording w/ given parameter values.
 	 */
 	public Recording(String theTitle, double thePrice,
@@ -62,7 +53,7 @@ public abstract class Recording implements Comparable<Recording> {
 
 
 	//
-	//  GETTER / SETTER METHODS
+	//  GETTER METHODS
 	//
 
 	/**

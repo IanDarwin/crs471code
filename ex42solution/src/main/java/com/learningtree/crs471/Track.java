@@ -33,14 +33,6 @@ public class Track {
 	// CONSTRUCTORS
   	//
 
-	/**
-	 *  Default constructor.  Simply creates an empty track.
-	 */
-	public Track() {
-		title = "empty";
-		runningTime = new Duration();
-	}
-
   	/**
 	 *  Creates a Track with the given parameter values
 	 */
@@ -62,24 +54,10 @@ public class Track {
 	}
 
 	/**
-	 *  Sets the title of the track
-	 */
-	public void setTitle(String	aTitle) {
-		title = aTitle;
-	}
-
-	/**
 	 *  Returns the running time of the track
 	 */
 	public Duration getRunningTime() {
 		return runningTime;
-	}
-
-	/**
-	 *  Sets the running time of the track
-	 */
-	public void setRunningTime(Duration theRunningTime) {
-		runningTime = theRunningTime;
 	}
 
 	/**
