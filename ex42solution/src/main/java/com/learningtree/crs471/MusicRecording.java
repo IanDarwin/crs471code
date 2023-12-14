@@ -73,6 +73,10 @@ public class MusicRecording extends Recording {
 	//
 	//			artist, title
 	//
+	@Override
+	public String toString() {
+		return artistName + ", " + getTitle();
+	}
 
 	@Override
 	public Duration getRunningTime() {
@@ -91,10 +95,7 @@ public class MusicRecording extends Recording {
 		return d;
 	}
 
-	@Override
-	public String toString() {
-		return artistName + ", " + getTitle();
-	}
+	
 	
 	// Bonus: Print the tracks.
 	// NOT part of toString; printing all the tracks
