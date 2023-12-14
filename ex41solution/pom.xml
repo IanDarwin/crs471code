@@ -55,30 +55,30 @@
 	</dependencies>
 
 	<build>
+		<defaultGoal>package</defaultGoal>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.4.0</version>
-				<configuration>
-					<reportOutputDirectory>${project.basedir}</reportOutputDirectory>
-					<destDir>docs</destDir>
-					<failOnError>false</failOnError>
-					<links>
-						<link>https://docs.oracle.com/en/java/javase/17/docs/api</link>
-					</links>
-					<show>protected</show>
-					<source>${javase.version}</source>
-					<use>false</use>
-				</configuration>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
 				<executions>
 					<execution>
-						<id>attach-javadocs</id>
+						<id>auto-execution</id>
+						<phase>package</phase>
 						<goals>
-							<goal>jar</goal>
+							<goal>java</goal>
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<mainClass>com.learningtree.crs471.Driver</mainClass>
+					<arguments>
+						<arg>Java's Greatest Hutts</arg>
+						<arg>4</arg>
+						<arg>44</arg>
+					</arguments>
+
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
