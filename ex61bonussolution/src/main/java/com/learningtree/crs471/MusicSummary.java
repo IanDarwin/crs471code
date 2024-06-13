@@ -56,8 +56,15 @@ public class MusicSummary {
 		}
 	}
 
+	// True if we are at the start of the recording.
 	private static boolean atStart = false;
 
+
+	/**
+	 * Process a line, which can be either a SEPARATOR ("-------...") line,
+	 * a a line that starts a recording and has 5 fields, the 3rd being the category,
+	 * or a track entry with 2 or 3 fields, which we ignore.
+	 */
 	private static void doLine(String line) {
 		// Step 3. Increment recordingCount when the recording separator found
 		if (SEPARATOR.equals(line)) {
