@@ -4,7 +4,8 @@ import javax.swing.event.*;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *  This panel is responsible for displaying music recordings.  It contains
@@ -44,7 +45,7 @@ public class MusicPanel extends JPanel {
 		selectionLabel = new JLabel("Select a Music Category");
 
 		// get categories
-		ArrayList<String> categoryArrayList = myDataAccessor.getCategories();
+		List<String> categoryArrayList = myDataAccessor.getCategories();
 
 		// populate category combo box
 		categoryComboBox = new JComboBox();
@@ -106,7 +107,7 @@ public class MusicPanel extends JPanel {
 			String category = (String) categoryComboBox.getSelectedItem();
 
 			// Get the recordings
-			ArrayList<MusicRecording> info = myDataAccessor.getRecordings(category);
+			List<MusicRecording> info = myDataAccessor.getRecordings(category);
 
 			// Populate the list box
 			musicListBox.setListData(info.toArray());

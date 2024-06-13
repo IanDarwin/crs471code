@@ -17,11 +17,11 @@ import java.sql.*;
  *       MusicDataAccessor myDataAccessor = new MusicDataAccessor();
  *
  *       // get a list of available categories;
- *       ArrayList&lt;String&gt; cats = myDataAccessor.getCategories();
+ *       List&lt;String&gt; cats = myDataAccessor.getCategories();
  *       ...
  *
  *       // get a list of jazz recordings
- *       ArrayList&lt;MusicRecording&gt; jazzRecordingList = myDataAccessor.getRecordings(&quot;Jazz&quot;);
+ *       List&lt;MusicRecording&gt; jazzRecordingList = myDataAccessor.getRecordings(&quot;Jazz&quot;);
  *       ...
  *
  * </pre>
@@ -61,14 +61,14 @@ public class MusicDataAccessor {
 	/**
 	 * Returns a sorted list of the categories for the recordings.
 	 */
-	public ArrayList<String> getCategories() {
+	public List<String> getCategories() {
 		
 		//  TO DO:  Complete the steps below.
 		//
 		//			For help, see the hints online
 
-		// 2. Create an empty ArrayList of <String> for the categories
-		ArrayList<String> categories = new ArrayList<String>();
+		// 2. Create an empty List of <String> for the categories
+		List<String> categories = new ArrayList<String>();
 
 		// 3. Execute query with the given sql
 		String sql = "SELECT name FROM Music_Categories order by name asc";
@@ -78,7 +78,7 @@ public class MusicDataAccessor {
 			Statement myStmt = myConn.createStatement();
 			ResultSet myRs = myStmt.executeQuery(sql);) {
 
-			// 4. Process result and place data in the categories ArrayList
+			// 4. Process result and place data in the categories List
 			while (myRs.next()) {
 				String category = myRs.getString("name");
 				categories.add(category);
@@ -88,7 +88,7 @@ public class MusicDataAccessor {
 			logger.severe(exc.toString());
 		}
 
-		// 5. Return the categories ArrayList
+		// 5. Return the categories List
 		return categories;
 	}
 
@@ -99,9 +99,9 @@ public class MusicDataAccessor {
 	 *            the category for requested recordings.
 	 * @return collection of <code>MusicRecording</code> objects
 	 */
-	public ArrayList<MusicRecording> getRecordings(String category) {
+	public List<MusicRecording> getRecordings(String category) {
 
-		ArrayList<MusicRecording> recordingList = new ArrayList<MusicRecording>();
+		List<MusicRecording> recordingList = new ArrayList<MusicRecording>();
 
 		logger.info("Getting a list of recordings for: " + category);
 
@@ -152,7 +152,7 @@ public class MusicDataAccessor {
 	 */
 	protected Track[] getTracks(int recordingId) throws SQLException {
 
-		ArrayList<Track> trackList = new ArrayList<Track>();
+		List<Track> trackList = new ArrayList<Track>();
 
 		// Concatenating an input int is probably safe :-)
 		String sql = "SELECT * FROM Music_Tracks where recording_id=" + recordingId;
