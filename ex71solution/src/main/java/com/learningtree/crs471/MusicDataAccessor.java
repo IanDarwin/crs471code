@@ -13,9 +13,6 @@ import java.sql.*;
  *
  * <pre>
  *
- *
- *
- *
  *       // create and load the data accessor
  *       MusicDataAccessor myDataAccessor = new MusicDataAccessor();
  *
@@ -27,12 +24,10 @@ import java.sql.*;
  *       ArrayList&lt;MusicRecording&gt; jazzRecordingList = myDataAccessor.getRecordings(&quot;Jazz&quot;);
  *       ...
  *
- *
- *
- *
  * </pre>
  *
  * @author 471 Development Team
+ * @author Debugged by Ian Darwin
  */
 public class MusicDataAccessor {
 
@@ -73,47 +68,22 @@ public class MusicDataAccessor {
 		// 2. Create an empty ArrayList of <String> for the categories
 		ArrayList<String> categories = new ArrayList<String>();
 
-		Connection myConn = null;
-		Statement myStmt = null;
-		ResultSet myRs = null;
+		// 3. Execute query with the given sql
+		String sql = "SELECT name FROM Music_Categories order by name asc";
 
-		try {
-			myConn = DriverManager.getConnection(
+		try (Connection myConn = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/rainforestdb", "student", "student");
-
-			// 3. Execute query with the given sql
-			String sql = "SELECT name FROM Music_Categories order by name asc";
-
-			myStmt = myConn.createStatement();
-			myRs = myStmt.executeQuery(sql);
+			Statement myStmt = myConn.createStatement();
+			ResultSet myRs = myStmt.executeQuery(sql);) {
 
 			// 4. Process result and place data in the categories ArrayList
 			while (myRs.next()) {
 				String category = myRs.getString("name");
 				categories.add(category);
 			}
-
 		}
 		catch (SQLException exc) {
 			logger.severe(exc.toString());
-		}
-		finally {
-			try {
-				if (myRs != null) {
-					myRs.close();
-				}
-
-				if (myStmt != null) {
-					myStmt.close();
-				}
-				
-				if (myConn != null) {
-					myConn.close();
-				}
-			}
-			catch (Exception exc) {
-				logger.severe(exc.toString());
-			}
 		}
 
 		// 5. Return the categories ArrayList
@@ -122,7 +92,7 @@ public class MusicDataAccessor {
 
 	/**
 	 * Returns a sorted list of recordings that match a given category
-	 *
+	 * Uses a PreparedStatement to prevent SQL injection attacks!!
 	 * @param category
 	 *            the category for requested recordings.
 	 * @return collection of <code>MusicRecording</code> objects
@@ -133,17 +103,18 @@ public class MusicDataAccessor {
 
 		logger.info("Getting a list of recordings for: " + category);
 
-		String sql = "SELECT * FROM Music_Recordings where category='" + category + "' order by artist_name";
+		String sql = "SELECT * FROM Music_Recordings where category= ? order by artist_name";
 
 		Connection myConn = null;
-		Statement myStmt = null;
+		PreparedStatement myStmt = null;
 		
 		try {
 			myConn = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/rainforestdb", "student", "student");
 
-			myStmt = myConn.createStatement();
-			ResultSet myRs = myStmt.executeQuery(sql);
+			myStmt = myConn.prepareStatement(sql);
+			myStmt.setString(1, category);
+			ResultSet myRs = myStmt.executeQuery();
 
 			while (myRs.next()) {
 				int recordingId = myRs.getInt("recording_id");
@@ -153,8 +124,8 @@ public class MusicDataAccessor {
 				double price = myRs.getDouble("price");
 
 				Track[] trackList = getTracks(recordingId);
-				MusicRecording tempRecording = new MusicRecording(artist, trackList, title, price, category, imageName);
-				recordingList.add(tempRecording);
+				recordingList.add(
+					new MusicRecording(artist, trackList, title, price, category, imageName));
 			}
 		}
 		catch (SQLException exc) {
@@ -181,6 +152,7 @@ public class MusicDataAccessor {
 
 		ArrayList<Track> trackList = new ArrayList<Track>();
 
+		// Concatenating an input int is probably safe :-)
 		String sql = "SELECT * FROM Music_Tracks where recording_id=" + recordingId;
 
 		Connection myConn = null;
