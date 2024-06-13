@@ -48,7 +48,7 @@ public class MusicDataAccessor {
 		try {
 			// 1. Load database driver
 			//         - driver name = com.mysql.jdbc.Driver		
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			logger.info("Loaded driver");
 		} catch (Exception exc) {
