@@ -53,6 +53,8 @@ public class MusicDataAccessor {
 			logger.info("Loaded driver");
 		} catch (Exception exc) {
 			logger.severe(exc.toString());
+			// Program can't continue without database!
+			throw new ExceptionInInitializerError(exc.toString());
 		}
 	}
 
