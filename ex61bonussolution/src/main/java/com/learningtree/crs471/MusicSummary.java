@@ -66,13 +66,16 @@ public class MusicSummary {
 	 * or a track entry with 2 or 3 fields, which we ignore.
 	 */
 	private static void doLine(String line) {
+		if (line == null || line.isEmpty()) {
+			return;
+		}
 		// Step 3. Increment recordingCount when the recording separator found
 		if (SEPARATOR.equals(line)) {
 			atStart = true;
 			++recordingCount;
 		} else {
 			if (atStart) {
-				String[] fields = line.split(", *");
+				String[] fields = line.split(", *"); // * in case missing space
 				System.out.printf("Found %d fields, first = %s\n", fields.length, fields[0]);
 				String category = fields[2];
 				categoriesCount.put(category, 
