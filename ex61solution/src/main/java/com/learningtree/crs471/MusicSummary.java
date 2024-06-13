@@ -24,7 +24,7 @@ public class MusicSummary {
 
 		// A modern way, using Files.readAllLines and a Lambda
 		count = 0;
-		Files.readAllLines(Path.of("music.db")).forEach(line -> {
+		Files.lines(Path.of("music.db")).forEach(line -> {
 
 			// Step 3. Increment recordingCount when the recording separator
 			// String "----------------------" is found
@@ -36,8 +36,7 @@ public class MusicSummary {
 		System.out.println(count);
 
 		// An even better way, using Java 8 Streams and Lambda:
-		count = Files.readAllLines(Path.of("music.db"))
-				.stream()
+		count = Files.lines(Path.of("music.db"))
 				.filter(line -> line.equals(SEP))
 				.count();
 		System.out.println(count);
