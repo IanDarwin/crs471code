@@ -76,7 +76,7 @@ public class MusicSummary {
 		} else {
 			if (atStart) {
 				String[] fields = line.split(", *"); // * in case missing space
-				System.out.printf("Found %d fields, first = %s\n", fields.length, fields[0]);
+				// System.out.printf("Found %d fields, first = %s\n", fields.length, fields[0]);
 				String category = fields[2];
 				categoriesCount.put(category, 
 						categoriesCount.getOrDefault(category, 0) + 1);
