@@ -1,7 +1,11 @@
 = crs471add
 
 This repo contains extra code for Course 471 Attendees. It may not make any sense outside
-the context of that course. There are half a dozen modules.
+the context of that course. 
+
+There are close to a dozen modules. Each is a Maven Project with the name of the
+directory it's in, and, an Eclipse project with `ian471-` stuck on the front of the
+prject name, to avoid clashing with the ones provided by the course.
 
 The code that duplicates classes in the exercises/solutions is intended to provide
 more "modern" (Java 17-era) ways of writing the code.

@@ -11,6 +11,6 @@ public class FrameSizeTest {
 		int width = 100;
 		int expectedHeight = 80;
 		assertEquals(expectedHeight, FrameSize.getHeight(width), 
-				"getHeght");
+				"getHeight");
 	}
 }
