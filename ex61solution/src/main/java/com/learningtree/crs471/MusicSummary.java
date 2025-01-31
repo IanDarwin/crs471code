@@ -10,7 +10,7 @@ import java.util.List;
 /** 
  * Exercise 6.1, recordings "db" (sorta) text file summary, 
  * done using this-century Java APIs
- * REQUIRES Java 8
+ * REQUIRES Java 8+
  * @author Ian Darwin
  */
 public class MusicSummary {
@@ -51,7 +51,7 @@ public class MusicSummary {
 		}
 		System.out.println(count);
 
-		// Finally, the legacy (Java 5) way:
+		// Finally, the legacy (Java 1.1) way:
 		count = 0;
 		try (BufferedReader is = new BufferedReader(new FileReader("music.db"));) {
 			String line;
